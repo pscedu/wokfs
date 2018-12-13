@@ -53,7 +53,7 @@ char				 mountpoint[PATH_MAX];
  * So we have to do an explicit unmount here.
  */
 void
-unmount(const char *mp)
+do_unmount(const char *mp)
 {
 	char buf[BUFSIZ];
 	int rc;
@@ -216,7 +216,7 @@ main(int argc, char *argv[])
 
 	noncanon_mp = argv[0];
 	if (unmount_first)
-		unmount(noncanon_mp);
+		do_unmount(noncanon_mp);
 
 	/* canonicalize mount path */
 	if (realpath(noncanon_mp, mountpoint) == NULL)
