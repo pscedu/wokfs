@@ -1,4 +1,3 @@
-/* $Id$ */
 /*
  * %ISC_START_LICENSE%
  * ---------------------------------------------------------------------
@@ -195,7 +194,7 @@ wokctlcmd_reload(__unusedx int fd, __unusedx struct psc_ctlmsghdr *mh,
 	}
 #endif
 
-	psc_assert(wm);
+	pfl_assert(wm);
 
 	m = &wm->wm_module;
 	psc_dynarray_setpos(&pscfs_modules, wcmc->wcmc_pos, m);

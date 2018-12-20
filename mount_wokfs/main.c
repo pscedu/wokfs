@@ -1,4 +1,3 @@
-/* $Id$ */
 /*
  * %ISC_START_LICENSE%
  * ---------------------------------------------------------------------
@@ -245,7 +244,7 @@ main(int argc, char *argv[])
 	p = getenv("PATH");
 	rc = pfl_asprintf(&path_env, "%s:%s/../wokctl%s%s", dir, dir,
 	    p ? ":" : "", p ? p : "");
-	psc_assert(rc != -1);
+	pfl_assert(rc != -1);
 	setenv("PATH", path_env, 1);
 
 	/*
