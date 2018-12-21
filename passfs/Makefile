@@ -6,7 +6,6 @@ include ${ROOTDIR}/Makefile.path
 SHLIB=		passfs.so
 SRCS+=		passfs.c
 
-#MODULES+=	pscfs pfl
-MODULES+=	pscfs-hdrs
+MODULES+=	pscfs pfl-hdrs
 
 include ${PFLMK}
